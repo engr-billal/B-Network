@@ -59,7 +59,6 @@ export const updatePost = ({ content, images, auth, status }) => async (dispatch
 
 		const res = await patchDataApi(`post/${status._id}`, { content, images: [...imgOldUrl, ...media] }, auth.token)
 
-		console.log(res)
 		dispatch({ type: POST_TYPES.UPDATE_POST, payload: res.data.newPost })
 
 		dispatch({ type: GLOBALTYPES.ALERT, payload: { success: res.data.msg } })

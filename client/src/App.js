@@ -1,22 +1,21 @@
+import { useEffect } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { useEffect } from 'react'
-
-import { refreshToken } from './redux/actions/authAction'
-
-import Home from './pages/home'
-import Login from './pages/login'
-import Register from './pages/register'
-
-import PageRender from './customRouter/PageRender'
-import PrivateRouter from './customRouter/PrivateRouter'
-
-import Alert from './components/alert/Alert'
-import Header from './components/header/Header'
-import StatusModal from './components/StatusModal'
 
 import { getPosts } from './redux/actions/postAction'
 import { getSuggestions } from './redux/actions/suggestionsAction'
+import { refreshToken } from './redux/actions/authAction'
+
+import Alert from './components/alert/Alert'
+import Header from './components/header/Header'
+import Home from './pages/home'
+import Login from './pages/login'
+import PageRender from './customRouter/PageRender'
+import PrivateRouter from './customRouter/PrivateRouter'
+import Register from './pages/register'
+import StatusModal from './components/StatusModal'
+
+import io from 'socket.io-client'
 
 function App() {
 	const { auth, status, modal } = useSelector((state) => state)
@@ -24,6 +23,7 @@ function App() {
 
 	useEffect(() => {
 		dispatch(refreshToken())
+		const socket = io()
 	}, [dispatch])
 
 	useEffect(() => {
