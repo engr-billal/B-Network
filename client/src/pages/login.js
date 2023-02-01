@@ -32,7 +32,7 @@ const Login = () => {
 	return (
 		<div className="auth-page">
 			<form onSubmit={handleSubmit}>
-				<h3 className="text-uppercase text-center mb-5">B-Network</h3>
+				<h3 className="mb-5 text-center text-uppercase">B-Network</h3>
 
 				<div className="form-group">
 					<label htmlFor="exampleInputEmail1">Email address</label>

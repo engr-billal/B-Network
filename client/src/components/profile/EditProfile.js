@@ -85,11 +85,11 @@ const EditProfile = ({ setOnEdit }) => {
 				<div className="form-group">
 					<label htmlFor="story">Story</label>
 					<textarea type="text" name="story" value={story} id="story" className="form-control" onChange={handleInput} cols="30" rows="4" />
-					<small className="text-danger d-block text-right ">{story.length}/200</small>
+					<small className="text-right text-danger d-block ">{story.length}/200</small>
 				</div>
 
 				<label htmlFor="gender">Gender</label>
-				<div className="input-group-prepend px-0 mb-4">
+				<div className="px-0 mb-4 input-group-prepend">
 					<select name="gender" id="gender" value={gender} className="custom-select text-capitalize" onChange={handleInput}>
 						<option value="male">Male</option>
 						<option value="female">Female</option>

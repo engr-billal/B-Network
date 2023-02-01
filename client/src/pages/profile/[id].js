@@ -23,6 +23,7 @@ const Profile = () => {
 		}
 	}, [dispatch, id, auth, profile.ids])
 
+	
 	return (
 		<div className="profile">
 			<Info auth={auth} profile={profile} dispatch={dispatch} id={id} />

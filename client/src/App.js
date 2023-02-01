@@ -15,7 +15,7 @@ import PrivateRouter from './customRouter/PrivateRouter'
 import Register from './pages/register'
 import StatusModal from './components/StatusModal'
 
-import io from 'socket.io-client'
+// import io from 'socket.io-client'
 
 function App() {
 	const { auth, status, modal } = useSelector((state) => state)
@@ -23,7 +23,7 @@ function App() {
 
 	useEffect(() => {
 		dispatch(refreshToken())
-		const socket = io()
+		// const socket = io()
 	}, [dispatch])
 
 	useEffect(() => {

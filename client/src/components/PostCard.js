@@ -15,6 +15,7 @@ const PostCard = ({ post }) => {
 			<InputComment post={post} />
 		</div>
 	)
+	
 }
 
 export default PostCard
